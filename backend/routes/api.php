@@ -24,6 +24,9 @@ Route::group(['middleware' => ['auth:api']], function() {
     Route::post('bookings', [BookingController::class, 'store']);
     Route::get('my-bookings', [BookingController::class, 'myBookings']);
 
+    // Profile Update
+    Route::put('user/update', [AuthController::class, 'updateProfile']);
+
     // Admin only
     Route::group(['middleware' => ['is_admin']], function() {
         Route::get('admin/bookings', [BookingController::class, 'index']);

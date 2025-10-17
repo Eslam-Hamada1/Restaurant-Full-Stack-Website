@@ -17,11 +17,9 @@ export default function Register() {
     const validate = () => {
         const newErrors = {};
 
-        // Name validation (must start with capital letter)
+        // Name validation
         if (!form.name.trim()) {
         newErrors.name = "Name is required.";
-        } else if (!/^[A-Z][a-zA-Z\s]*$/.test(form.name)) {
-        newErrors.name = "Name must start with a capital letter.";
         }
 
         // Email validation

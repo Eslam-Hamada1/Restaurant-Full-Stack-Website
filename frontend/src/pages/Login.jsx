@@ -50,64 +50,64 @@ export default function Login() {
 
     return (
         <div className="min-h-screen flex flex-col bg-gray-100">
-        {/* Navbar fixed at top */}
-        <Navbar />
+            {/* Navbar fixed at top */}
+            <Navbar />
 
-        {/* Login form centered below */}
-        <div className="flex-grow flex justify-center items-center">
-            <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-lg">
-            <h2 className="text-2xl font-bold text-center mb-6">Login</h2>
+            {/* Login form centered below */}
+            <div className="flex-grow flex justify-center items-center">
+                <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-lg">
+                <h2 className="text-2xl font-bold text-center mb-6">Login</h2>
 
-            <form onSubmit={handleLogin} className="space-y-4">
-                {/* Email */}
-                <div>
-                <label className="block mb-1 text-sm font-medium">Email</label>
-                <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className={`w-full border rounded-lg p-2 focus:outline-none ${
-                    errors.email ? "border-red-500" : "border-gray-300"
-                    }`}
-                />
-                {errors.email && (
-                    <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-                )}
+                <form onSubmit={handleLogin} className="space-y-4">
+                    {/* Email */}
+                    <div>
+                        <label className="block mb-1 text-sm font-medium">Email</label>
+                        <input
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            className={`w-full border rounded-lg p-2 focus:outline-none ${
+                            errors.email ? "border-red-500" : "border-gray-300"
+                            }`}
+                        />
+                        {errors.email && (
+                            <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                        )}
+                    </div>
+
+                    {/* Password */}
+                    <div>
+                        <label className="block mb-1 text-sm font-medium">Password</label>
+                        <input
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            className={`w-full border rounded-lg p-2 focus:outline-none ${
+                            errors.password ? "border-red-500" : "border-gray-300"
+                            }`}
+                        />
+                        {errors.password && (
+                            <p className="text-red-500 text-sm mt-1">{errors.password}</p>
+                        )}
+                    </div>
+
+                    {/* API / Success messages */}
+                    {errors.api && (
+                    <p className="text-red-500 text-sm mt-2">{errors.api}</p>
+                    )}
+                    {success && (
+                    <p className="text-green-600 text-sm mt-2">{success}</p>
+                    )}
+
+                    <button
+                    type="submit"
+                    className="w-full bg-yellow-500 text-white py-2 rounded-lg hover:bg-yellow-600 transition"
+                    >
+                    Login
+                    </button>
+                </form>
                 </div>
-
-                {/* Password */}
-                <div>
-                <label className="block mb-1 text-sm font-medium">Password</label>
-                <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    className={`w-full border rounded-lg p-2 focus:outline-none ${
-                    errors.password ? "border-red-500" : "border-gray-300"
-                    }`}
-                />
-                {errors.password && (
-                    <p className="text-red-500 text-sm mt-1">{errors.password}</p>
-                )}
-                </div>
-
-                {/* API / Success messages */}
-                {errors.api && (
-                <p className="text-red-500 text-sm mt-2">{errors.api}</p>
-                )}
-                {success && (
-                <p className="text-green-600 text-sm mt-2">{success}</p>
-                )}
-
-                <button
-                type="submit"
-                className="w-full bg-yellow-500 text-white py-2 rounded-lg hover:bg-yellow-600 transition"
-                >
-                Login
-                </button>
-            </form>
             </div>
-        </div>
         </div>
     );
 }
