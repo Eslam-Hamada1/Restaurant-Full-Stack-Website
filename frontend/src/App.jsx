@@ -10,24 +10,26 @@ import MyBookings from "./pages/MyBookings";
 import AdminUsers from "./pages/admin/AdminUsers";
 import AdminBookings from "./pages/admin/AdminBookings";
 import AdminMenu from "./pages/admin/AdminMenu";
+import EmailVerified from "./pages/EmailVerified";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Public Pages */}
+        {/* public pages */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
-        {/* User Pages */}
-        <Route path="/book-table" element={<BookTable />} />
+        {/* user (logged in) pages */}
+        <Route path="/bookings" element={<BookTable />} />
         <Route path="/my-bookings" element={<MyBookings />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/email-verified" element={<EmailVerified />} />
 
-        {/* Admin Pages */}
+        {/* admin pages */}
         <Route path="/admin/users" element={<AdminUsers />} />
         <Route path="/admin/bookings" element={<AdminBookings />} />
         <Route path="/admin/menu" element={<AdminMenu />} />

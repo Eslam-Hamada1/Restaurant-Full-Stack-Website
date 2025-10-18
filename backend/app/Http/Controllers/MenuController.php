@@ -3,24 +3,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\MenuItem;
-use Illuminate\Support\Facades\Validator;
 
-class MenuController extends Controller
-{
-    // Public list
-    public function index()
-    {
+class MenuController extends Controller {
+    // publuc menu
+    public function index() {
         return response()->json(MenuItem::all());
     }
 
-    public function show($id)
-    {
+    public function show($id) {
         return response()->json(MenuItem::findOrFail($id));
     }
 
-    // Admin resource methods
-    public function store(Request $request)
-    {
+    // admin methods
+    public function store(Request $request) {
         $data = $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'nullable|string',
@@ -35,8 +30,7 @@ class MenuController extends Controller
         ], 201);
     }
 
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id) {
         $item = MenuItem::findOrFail($id);
 
         $item->update($request->only(['title','description','price','image_url']));
@@ -47,8 +41,7 @@ class MenuController extends Controller
         ]);
     }
 
-    public function destroy($id)
-    {
+    public function destroy($id) {
         MenuItem::destroy($id);
         return response()->json(['message' => 'Menu item deleted successfully']);
     }

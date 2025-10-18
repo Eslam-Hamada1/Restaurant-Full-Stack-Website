@@ -14,7 +14,6 @@ export default function Home() {
     return (
         <div>
             <Navbar/>
-
             <section className="h-screen flex flex-col justify-center items-center bg-cover bg-center text-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1551782450-a2132b4ba21d')" }}>
                 <h1 className="text-6xl font-extrabold text-white drop-shadow-lg mb-6">Delicious Food for Every Mood</h1>
                 <p className="text-white text-lg mb-8 max-w-lg">Enjoy a fine dining experience with fresh ingredients and creative flavors.</p>
@@ -40,11 +39,8 @@ export default function Home() {
             <section className="bg-orange-500 py-16 text-center text-white">
                 <h2 className="text-4xl font-bold mb-4">Want to reserve your table?</h2>
                 <p className="mb-6">Book online and enjoy a great meal without the wait!</p>
-                <Link to="/bookings " className="bg-white text-orange-600 px-6 py-3 font-semibold rounded-full hover:bg-gray-100">
-                    Book Now
-                </Link>
+                <Link to="/bookings " className="bg-white text-orange-600 px-6 py-3 font-semibold rounded-full hover:bg-gray-100">Book Now</Link>
             </section>
-
             <Footer/>
         </div>
     );
