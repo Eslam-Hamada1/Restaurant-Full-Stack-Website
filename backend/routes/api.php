@@ -24,7 +24,6 @@ Route::group(['middleware' => ['auth:api']], function() {
     Route::get('my-bookings', [BookingController::class, 'myBookings']);
     Route::delete('my-bookings/{id}/cancel', [BookingController::class, 'cancel']);
 
-
     // update profile
     Route::put('user/update', [AuthController::class, 'updateProfile']);
 

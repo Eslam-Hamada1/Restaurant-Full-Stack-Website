@@ -7,7 +7,6 @@ import Footer from "../components/Footer";
 export default function MyBookings() {
     const navigate = useNavigate();
     const token = localStorage.getItem("token");
-
     const [bookings, setBookings] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
