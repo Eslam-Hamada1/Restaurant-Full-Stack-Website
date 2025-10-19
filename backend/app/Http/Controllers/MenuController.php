@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 use App\Models\MenuItem;
 
 class MenuController extends Controller {
-    // publuc menu
+    // public menu
     public function index() {
         return response()->json(MenuItem::all());
     }
