@@ -5,7 +5,7 @@ A full-stack restaurant management system featuring a responsive UI, user authen
 ---
 
 ## Restaurant Link
-https://restaurant-full-stack-website-jpyb.vercel.app/
+https://restaurant-full-stack-website-jpyb.vercel.app/  (Only the frontend is deployed)
 
 ## 📌 Overview
 
@@ -111,3 +111,4 @@ npm start
 
 ## 🤝 Author
 **Eslam Hamada** – Full-Stack Developer
+
