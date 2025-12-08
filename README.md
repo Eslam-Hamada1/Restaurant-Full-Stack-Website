@@ -93,13 +93,18 @@ git clone https://github.com/Eslam-Hamada1/Restaurant-Full-Stack-Website.git
 cd `repo_name`
 ```
 
-### 2. Install dependencies
+### 2. Install dependencies (2 Terminals)
+- Backend
+```sh
+php artisan serve
+```
+- Frontend
 ```sh
 npm install
 ```
 
 ### 3. Configure environment variables
-Create a `.env` file:
+Create a `.env` file in backend:
 ```
 DATABASE_URL=
 JWT_SECRET=
@@ -107,12 +112,13 @@ JWT_SECRET=
 
 ### 4. Start the server
 ```sh
-npm start
+npm run dev
 ```
 
 ---
 
 ## 🤝 Author
 **Eslam Hamada** – Full-Stack Developer
+
 
 
